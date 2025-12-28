@@ -1,7 +1,7 @@
 package com.assignments.Assignment1;
 
 import java.util.Scanner;
-
+//5. Take 2 numbers as input and print the largest number.
 public class LargestNumber {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
