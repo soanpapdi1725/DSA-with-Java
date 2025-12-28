@@ -1,7 +1,7 @@
 package com.assignments.Assignment1;
 
 import java.util.Scanner;
-
+//7. To calculate Fibonacci Series up to n numbers.
 public class FibonacciSeries {
     public static  void main(String[] args){
         Scanner input = new Scanner(System.in);
