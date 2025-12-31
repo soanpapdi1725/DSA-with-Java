@@ -37,13 +37,15 @@ public class Loops {
 
 
         /*
-         * while loop
+         * do-while loop -> atleast checks one time
          * initialization
-         * while(condition){
+         * do{
          * increment/decrement
-         * }
+         * }while(condition)
          * */
-        System.out.print("Enter your number: ");
-        int num = input.nextInt();
+        int num = 1;
+        do {
+            System.out.println("Hello world");
+        } while (num != 1);
     }
 }
