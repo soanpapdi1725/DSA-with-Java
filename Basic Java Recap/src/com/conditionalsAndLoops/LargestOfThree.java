@@ -17,6 +17,8 @@ public class LargestOfThree {
         } else {
             max = c;
         }
+
+        max = Math.max(a, Math.max(b, c));
         System.out.println(max + " is max number");
     }
 }
