@@ -19,12 +19,12 @@ public class AverageOfNnumbers {
                 sum = sum + input.nextInt();
                 count++;
             } else if (option == 2) {
-                avg = sum / count;
+                avg = (float) sum / count;
                 System.out.print("Average is: " + avg);
                 break;
             } else {
                 System.out.println("Choose valid option");
-                avg = sum / count;
+                avg = (float) sum / count;
                 System.out.println("Average is: " + avg);
                 break;
             }
