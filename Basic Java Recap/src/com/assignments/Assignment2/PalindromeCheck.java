@@ -17,6 +17,7 @@ public class PalindromeCheck {
         if (num == rev) {
             System.out.println("It is palindrome");
         } else {
+            System.out.println(rev);
             System.out.println("It is not palindrome");
         }
     }
