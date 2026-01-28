@@ -11,15 +11,15 @@ public class SwapInArray {
         int index1 = input.nextInt();
         System.out.print("Enter the index2: ");
         int index2 = input.nextInt();
-        int[] array = swap(arr, index1, index2);
-        System.out.println(Arrays.toString(array));
+        swap(arr, index1, index2);
+        System.out.println(Arrays.toString(arr));
     }
 
-    static int[] swap(int[] arr, int index1, int index2) {
+    static void swap(int[] arr, int index1, int index2) {
         int temp = arr[index1];
         arr[index1] = arr[index2];
         arr[index2] = temp;
-        return arr;
+
     }
 
 }
