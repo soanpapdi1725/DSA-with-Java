@@ -33,7 +33,52 @@ public class ArrayListIntro {
           if u want your arrayList to be converted into simple array while returning just use toArray function
          */
 
-        
+        list.add(45);
+        list.add(26);
+        list.add(963);
+        list.add(455);
+        list.add(89);
+        list.add(105);
+        list.add(96);
+        list.add(42);
+        list.add(93);
+        list.add(45);
+        list.add(99);
+        list.add(75);
+        list.add(63);
+        list.add(75);
+        list.add(85);
+        list.add(36);
+        list.add(75);
+        list.add(41);
+        list.add(10);
+        list.add(7);
+        list.add(9);
+        System.out.println(list); // automatically calls Arrays.toString method in it's implementation
+
+        List<Integer> list2 = new ArrayList<>(3);
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter the " + (i + 1) + "th element: ");
+            list2.add(input.nextInt());
+        }
+        System.out.println(list2);
+        for (int i = 0; i < list2.size(); i++) {
+            System.out.print(list2.get(i) + ", ");
+        }
+
+        List<Integer> listOperations = new ArrayList<>();
+
+        listOperations.add(55);
+        listOperations.add(10);
+        listOperations.add(41);
+        listOperations.add(10);
+        listOperations.add(102);
+        System.out.println("\n\n" + "list operations\n" + listOperations);// [55,10,41,10,102]
+        listOperations.set(4, 50); //index 4's element will be replaced with 50
+        System.out.println("\nafter replacing index 4 with 50 \n" + listOperations);
+        listOperations.remove(4);
+        System.out.println("\nafter Removing index 4's element\n" + listOperations);
+
     }
 
 }
