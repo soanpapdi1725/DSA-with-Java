@@ -17,6 +17,7 @@ public class Intro {
         int[] arr = {55, 9, 52, 96, 74, 10, 26, 7, -5, -10, 5, -4};
         int target = 5;
         System.out.println("Index of Target is: " + searchIndex(arr, target) + "\nitem was: " + searchItem(arr, target));
+        System.out.println("Searched in range: " + searchItemInRange(arr, 74, 2, 8));
     }
 
     static int searchIndex(int[] arr, int target) {
@@ -38,6 +39,19 @@ public class Intro {
         for (int index = 0; index < arr.length; index++) {
             if (arr[index] == target) {
                 return arr[index];
+            }
+        }
+        return -1;
+    }
+
+    static int searchItemInRange(int[] arr, int target, int start, int end) {
+        if (arr.length == 0) {
+            return -1;
+
+        }
+        for (int index = start; index < end; index++) {
+            if (arr[index] == target) {
+                return index;
             }
         }
         return -1;
