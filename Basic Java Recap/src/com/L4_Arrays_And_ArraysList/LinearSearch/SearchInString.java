@@ -41,6 +41,9 @@ public class SearchInString {
         if (word.isEmpty()) {
             return -1;
         }
+        if (start == end) {
+            return start;
+        }
         for (int index = start; index <= end; index++) {
             if (word.charAt(index) == ch) {
                 return index;
