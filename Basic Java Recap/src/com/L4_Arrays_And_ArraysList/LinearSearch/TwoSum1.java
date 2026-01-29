@@ -1,8 +1,8 @@
 package com.L4_Arrays_And_ArraysList.LinearSearch;
-
+// https://leetcode.com/problems/two-sum/
 import java.util.Arrays;
 
-public class TwoSumLeet {
+public class TwoSum1 {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
         System.out.println(Arrays.toString(twoSum(nums, 27)));

@@ -1,7 +1,7 @@
 package com.L4_Arrays_And_ArraysList.LinearSearch;
 
 // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
-class EvenDigits {
+class EvenDigits1295 {
     public static void main(String[] args) {
         int[] arr = {12, 345, 2, 6, 7896};
         System.out.println(findNumbers(arr));
