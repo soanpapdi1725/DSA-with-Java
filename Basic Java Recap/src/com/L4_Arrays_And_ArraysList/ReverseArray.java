@@ -9,7 +9,7 @@ public class ReverseArray {
         System.out.println(Arrays.toString(array));
     }
 
-    static void reverseArray(int[] arr) {
+    public static void reverseArray(int[] arr) {
         int temp;
         for (int i = 0; i < arr.length / 2; i++) {
             temp = arr[i];
