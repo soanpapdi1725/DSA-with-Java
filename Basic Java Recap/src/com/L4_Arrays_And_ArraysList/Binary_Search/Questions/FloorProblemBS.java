@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 /*
   Ques-> Suppose you have given an Array ->[4,8,9,14,19,25,29,30,35,47,50] and target -> 43
-  find the number which is just greater or equal to TARGET if it exists in array which is 47
+  find the number which is just smaller or equal to TARGET if it exists in array which is 35
 
   example
-  Array ->[4,8,9,14,19,25,29,30,35,47,50], Target -> 43
+  Array ->[4,8,9,14,19,25,29,30,35,47,50], Target -> 35
 
   start -> 0, end -> 10, mid -> 5
   array[mid] = 25 == 43 ❌ target is bigger
@@ -18,26 +18,22 @@ import java.util.Arrays;
   start -> 9, end -> 10, mid -> 9
   array[mid] = 47 == 43 ❌ target is smaller
 
-  start -> 9, end -> 8, mid -> 9 ->> Breaking the loop and returning array[start]
-  array[mid] = 47 == 43 ❌
+  start -> 9, end -> 8 ->> Breaking the loop and returning array[end] == 35 smaller than target
 
-  return array[start]
+  return array[end]
  */
-public class CeilProblemBS {
+public class FloorProblemBS {
     public static void main(String[] args) {
         int[] arr = {4, 8, 9, 14, 19, 25, 29, 30, 35, 47, 50};
         int target = 45;
         System.out.println(Arrays.toString(arr));
-        System.out.println(CeilBinarySearch(arr, target));
+        System.out.println(FloorBinarySearch(arr, target));
     }
 
-    static int CeilBinarySearch(int[] array, int target) {
+    static int FloorBinarySearch(int[] array, int target) {
 
         int start = 0;
         int end = array.length - 1;
-        if (target > array[end]) {
-            return -1;
-        }
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (array[mid] == target) {
@@ -49,6 +45,6 @@ public class CeilProblemBS {
                 end = mid - 1;
             }
         }
-        return start;
+        return end;
     }
 }
