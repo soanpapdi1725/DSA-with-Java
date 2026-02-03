@@ -26,7 +26,7 @@ import java.util.Arrays;
 public class CeilProblemBS {
     public static void main(String[] args) {
         int[] arr = {4, 8, 9, 14, 19, 25, 29, 30, 35, 47, 50};
-        int target = 5;
+        int target = 54;
         System.out.println(Arrays.toString(arr));
         System.out.println(CeilBinarySearch(arr, target));
     }
@@ -34,11 +34,14 @@ public class CeilProblemBS {
     static int CeilBinarySearch(int[] array, int target) {
 
         int start = 0;
-        int end = array.length;
+        int end = array.length - 1;
+        if (target > array[end]) {
+            return -1;
+        }
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (array[mid] == target) {
-                return array[mid];
+                return mid;
             }
             if (array[mid] < target) {
                 start = mid + 1;
@@ -46,6 +49,6 @@ public class CeilProblemBS {
                 end = mid - 1;
             }
         }
-        return array[start];
+        return start;
     }
 }
