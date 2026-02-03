@@ -25,17 +25,20 @@ import java.util.Arrays;
 public class FloorProblemBS {
     public static void main(String[] args) {
         int[] arr = {4, 8, 9, 14, 19, 25, 29, 30, 35, 47, 50};
-        int target = 45;
+        int target = 2;
         System.out.println(Arrays.toString(arr));
         int floorIndex = FloorBinarySearch(arr, target);
         System.out.println("Index of just smaller or equal to target is: " +
-                floorIndex + "\n And element is: " + arr[floorIndex]);
+                floorIndex);
     }
 
     static int FloorBinarySearch(int[] array, int target) {
 
         int start = 0;
         int end = array.length - 1;
+//        if (target < array[start]) {
+//            return -1;
+//        }
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (array[mid] == target) {
