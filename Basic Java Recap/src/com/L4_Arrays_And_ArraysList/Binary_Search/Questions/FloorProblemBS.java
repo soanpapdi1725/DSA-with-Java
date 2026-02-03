@@ -27,7 +27,9 @@ public class FloorProblemBS {
         int[] arr = {4, 8, 9, 14, 19, 25, 29, 30, 35, 47, 50};
         int target = 45;
         System.out.println(Arrays.toString(arr));
-        System.out.println(FloorBinarySearch(arr, target));
+        int floorIndex = FloorBinarySearch(arr, target);
+        System.out.println("Index of just smaller or equal to target is: " +
+                floorIndex + "\n And element is: " + arr[floorIndex]);
     }
 
     static int FloorBinarySearch(int[] array, int target) {

@@ -28,7 +28,9 @@ public class CeilProblemBS {
         int[] arr = {4, 8, 9, 14, 19, 25, 29, 30, 35, 47, 50};
         int target = 45;
         System.out.println(Arrays.toString(arr));
-        System.out.println(CeilBinarySearch(arr, target));
+        int ceilIndex = CeilBinarySearch(arr, target);
+        System.out.println("Index of just Greater or equal to target is: " +
+                ceilIndex + "\n And element is: " + arr[ceilIndex]);
     }
 
     static int CeilBinarySearch(int[] array, int target) {
