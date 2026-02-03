@@ -3,6 +3,15 @@ package com.L4_Arrays_And_ArraysList.Binary_Search.Questions;
 
 // if character at the end < target or if character at the end equals to the target return the first element of the array
 // use equals when u want to avoid
+/*
+letters[start % array.length]
+it means for example array length is 4
+if start == end and then start = mid + 1 means Start = 4 now
+start % length of array = 1 and give first element of array
+
+if it is less than of it it directly give that as remainder
+letters [2 % 4] = letters[2]
+ */
 
 import java.util.Arrays;
 
@@ -15,19 +24,19 @@ public class CharCeil744 {
                 CeilBinarySearch(letters, target));
     }
 
-    static char CeilBinarySearch(char[] array, char target) {
+    static char CeilBinarySearch(char[] letters, char target) {
 
         int start = 0;
-        int end = array.length - 1;
+        int end = letters.length - 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (array[mid] <= target) {
+            if (letters[mid] <= target) {
                 start = mid + 1;
-            } else if (array[mid] >= target) {
+            } else if (letters[mid] >= target) {
                 end = mid - 1;
             }
         }
         System.gc();
-        return array[start % array.length];
+        return letters[start % letters.length];
     }
 }
