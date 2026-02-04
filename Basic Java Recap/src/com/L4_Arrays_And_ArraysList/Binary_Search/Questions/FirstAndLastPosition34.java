@@ -32,9 +32,13 @@ public class FirstAndLastPosition34 {
     }
 
     static int[] searchRange(int[] nums, int target) {
-        int start = BinarySearch(nums, target, true);
-        int end = BinarySearch(nums, target, false);
-        return new int[]{start, end};
+        int[] ans = {-1, -1};
+        ans[0] = BinarySearch(nums, target, true);
+        if (ans[0] != -1) { // means target does not found in the array so don't check for second time
+            ans[1] = BinarySearch(nums, target, false);
+
+        }
+        return ans;
     }
 
     static int BinarySearch(int[] arr, int target, boolean findStartIndex) {
