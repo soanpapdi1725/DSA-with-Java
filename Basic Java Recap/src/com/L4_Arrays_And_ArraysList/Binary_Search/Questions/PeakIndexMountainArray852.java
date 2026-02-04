@@ -8,19 +8,19 @@ You are given an integer mountain array arr of length n where the values increas
 Return the index of the peak element.
 
 Your task is to solve it in O(log(n)) time complexity.
-         s           m               e
 array-> [-1,4,6,7,11,14,19,21,13,8,5,2] -> length 11
-         s              me
-array-> [-1,4,6,7,11,14,19,21,13,8,5,2] -> length 11 -> m < m+1
 to return peak element
-int max = array[0],
-s = 0,
-end = array.length - 1 => 0
-mid = 5 => array[mid] = 14
-if max > array[mid]
- update max = array[mid]
-else
-start = mid - 1
+
+loop-> start <= end
+possibilities
+1. check (arr[mid] > arr[mid+1] && arr[mid] > arr[mid-1]) // aagey piche dono se bada hai
+     if true  return mid
+2. check (arr[mid] < arr[mid+1])
+     if true, start = mid
+3. check (arr[mid] > arr[mid+1])
+     if true, end = mid
+
+if no return executed then return 0;
  */
 public class PeakIndexMountainArray852 {
     public static void main(String[] args) {
