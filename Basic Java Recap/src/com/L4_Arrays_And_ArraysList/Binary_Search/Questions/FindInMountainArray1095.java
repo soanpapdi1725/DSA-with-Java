@@ -2,8 +2,8 @@ package com.L4_Arrays_And_ArraysList.Binary_Search.Questions;
 
 public class FindInMountainArray1095 {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 4, 5, 1};
-        int target = 3;
+        int[] arr = {0, 5, 3, 1};
+        int target = 1;
         System.out.println(peakIndexInMountainArray(arr, target));
     }
 
@@ -18,33 +18,31 @@ public class FindInMountainArray1095 {
                 e = m;
             }
         }
-        return binarySearch(array, target, s);
+        int ans = binarySearch(array, target, 0, s, true);
+        if (ans != -1) return ans;
+        return binarySearch(array, target, s + 1, array.length - 1, false);
     }
 
-    static int binarySearch(int[] array, int target, int peak) {
-        int start = 0;
-        int end = peak;
+    static int binarySearch(int[] array, int target, int start, int end, boolean isAsc) {
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (array[mid] == target) {
                 return mid;
-            } else if (array[mid] > target) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
             }
-        }
-        start = peak + 1;
-        end = array.length - 1;
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-            if (array[mid] == target) {
-                return mid;
-            } else if (array[mid] > target) {
-                start = mid + 1;
+            if (isAsc) {
+                if (array[mid] > target) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
+                }
             } else {
-                end = mid - 1;
+                if (array[mid] > target) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
             }
+
         }
         return -1;
     }
