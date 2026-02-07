@@ -15,7 +15,7 @@ letters [2 % 4] = letters[2]
 
 import java.util.Arrays;
 
-public class CharCeil744 {
+public class CharCeil_744 {
     public static void main(String[] args) {
         char[] letters = {'c', 'f', 'j'}; // (99,102, 106) target -> 99 < 102
         char target = 'c';

@@ -1,7 +1,7 @@
 package com.L4_Arrays_And_ArraysList.Linear_Search;
 
 // https://leetcode.com/problems/richest-customer-wealth/description/
-public class MaxWealth1672 {
+public class MaxWealth_1672 {
     public static void main(String[] args) {
         int[][] accounts = {
                 {1, 5},
