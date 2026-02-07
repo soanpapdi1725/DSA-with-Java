@@ -22,7 +22,7 @@ package com.L4_Arrays_And_ArraysList.Binary_Search.Questions;
  * <p>
  * if no return executed then return 0;
  */
-public class PeakIndexMountainArray852 {
+public class PeakIndexMountainArray_852 {
     public static void main(String[] args) {
         int[] arr = {-1, 4, 6, 7, 11, 14, 19, 13, 8, 5, 2, 0};
         System.out.println(peakIndexInMountainArray(arr));

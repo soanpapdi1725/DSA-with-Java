@@ -22,7 +22,7 @@ Approach:-
 3. then run BinarySearch on it for Descending Order by Providing the Array, target, start = peak +1, end = array.length -1 , isAsc = false
  if it still comes -1 then directly return it
  */
-public class FindInMountainArray1095 {
+public class FindInMountainArray_1095 {
     public static void main(String[] args) {
         int[] arr = {0, 5, 3, 1};
         int target = 1;
