@@ -3,17 +3,25 @@ package com.L4_Arrays_And_ArraysList.Binary_Search.Questions;
 // https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 public class SearchInRotatedSortedArr_Duplicate_81 {
     public static void main(String[] args) {
-        int[] arr = {1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1};
+        int[] arr = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1};
         int target = 2;
     }
 
-    static int search(int[] arr, int target){
+    static int search(int[] arr, int target) {
         int pivot = findPivot(arr);
 
-        if(pivot == -1){
-            return
+        if (pivot == -1) {
+            return binarySearch(arr, target, 0, arr.length - 1);
         }
+        if (arr[pivot] == target) {
+            return pivot;
+        }
+        if (arr[0] > target) {
+            return binarySearch(arr, target, pivot + 1, arr.length - 1);
+        }
+        return binarySearch(arr, target, 0, pivot - 1);
     }
+
     static int findPivot(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
@@ -68,5 +76,18 @@ public class SearchInRotatedSortedArr_Duplicate_81 {
         return -1;
     }
 
-    static  int binarySearch(int[] )
+    static int binarySearch(int[] arr, int target, int start, int end) {
+        while (start <= end) {
+            int m = start + (end - start);
+            if (arr[m] == target) {
+                return m;
+            }
+            if (arr[m] < target) {
+                start = m + 1;
+            } else {
+                end = m - 1;
+            }
+        }
+        return -1;
+    }
 }
