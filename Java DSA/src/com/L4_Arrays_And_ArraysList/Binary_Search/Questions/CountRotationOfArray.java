@@ -3,8 +3,13 @@ package com.L4_Arrays_And_ArraysList.Binary_Search.Questions;
 //https://www.geeksforgeeks.org/dsa/find-rotation-count-rotated-sorted-array/
 public class CountRotationOfArray {
     public static void main(String[] args) {
-        int[] arr = {4, 5, 6, 0, 1, 2, 3};
-        System.out.println(findPivot(arr) + 1);
+        int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println(countOfRotation(arr));
+    }
+
+    static int countOfRotation(int[] arr) {
+        int pivot = findPivot(arr);
+        return pivot + 1;
     }
 
     static int findPivot(int[] arr) {
@@ -15,7 +20,7 @@ public class CountRotationOfArray {
             if (e > m && arr[m] > arr[m + 1]) {
                 return m;
             }
-            if (s < m && arr[m] < arr[m + 1]) {
+            if (s < m && arr[m] < arr[m - 1]) {
                 return m - 1;
             }
             if (arr[m] == arr[s] && arr[m] == arr[e]) {
