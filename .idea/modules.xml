@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Basic Java Recap/Basic Java Recap.iml" filepath="$PROJECT_DIR$/Basic Java Recap/Basic Java Recap.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DSA-with-Java.iml" filepath="$PROJECT_DIR$/.idea/DSA-with-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java DSA/Java DSA.iml" filepath="$PROJECT_DIR$/Java DSA/Java DSA.iml" />
     </modules>
   </component>
 </project>
