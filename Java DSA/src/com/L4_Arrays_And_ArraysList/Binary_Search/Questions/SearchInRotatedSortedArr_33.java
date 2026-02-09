@@ -27,9 +27,24 @@ Note:- If there is no duplicacy in the array then there will be single pivot the
  */
 public class SearchInRotatedSortedArr_33 {
     public static void main(String[] args) {
-        int[] arr = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1};
-        System.out.println(findPivot(arr));
+        int[] arr = {4, 5, 6, 7, 0, 1, 2, 3};
+        int target = 2;
+        System.out.println(search(arr, target));
+    }
 
+    static int search(int[] arr, int target) {
+        int pivot = findPivot(arr);
+
+        if (pivot == -1) {
+            return BinarySearch(arr, target, 0, arr.length - 1);
+        }
+        if (arr[pivot] == target) {
+            return pivot;
+        }
+        if (arr[0] > target) {
+            return BinarySearch(arr, target, pivot + 1, arr.length - 1);
+        }
+        return BinarySearch(arr, target, 0, pivot - 1);
     }
 
     static int findPivot(int[] nums) {

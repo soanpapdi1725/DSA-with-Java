@@ -5,6 +5,7 @@ public class SearchInRotatedSortedArr_Duplicate_81 {
     public static void main(String[] args) {
         int[] arr = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1};
         int target = 2;
+        System.out.println(search(arr, target));
     }
 
     static int search(int[] arr, int target) {
