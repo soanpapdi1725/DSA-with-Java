@@ -3,11 +3,17 @@ package com.L4_Arrays_And_ArraysList.Binary_Search.Questions;
 // https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 public class SearchInRotatedSortedArr_Duplicate_81 {
     public static void main(String[] args) {
-        int[] arr = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1};
-        System.out.println(arr.length);
-        System.out.println(findPivot(arr));
+        int[] arr = {1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1};
+        int target = 2;
     }
 
+    static int search(int[] arr, int target){
+        int pivot = findPivot(arr);
+
+        if(pivot == -1){
+            return
+        }
+    }
     static int findPivot(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
@@ -61,4 +67,6 @@ public class SearchInRotatedSortedArr_Duplicate_81 {
         }
         return -1;
     }
+
+    static  int binarySearch(int[] )
 }
