@@ -13,6 +13,13 @@ public class RotateArray {
 
     static void rotate(int[] nums, int k) {
         k = k % nums.length;
+        /*
+        Arr = [1,2,3,4,5] => length 4
+        k = 7 means rotate 7 times
+        if we rotate it 4 times it will be the same array it was given
+
+        if Arr.length < k then 7 % 4=> 3 means we only need to rotate 3 times
+         */
 
         reverseArr(nums, 0, nums.length - 1);
         reverseArr(nums, 0, k - 1);
