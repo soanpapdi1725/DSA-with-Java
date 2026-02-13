@@ -2,7 +2,7 @@ package com.L4_Arrays_And_ArraysList.Binary_Search.Binary_Search_2D;
 
 import java.util.Arrays;
 
-public class SortedMatrix {
+public class SortedMatrixSearchBinary {
     /*
     sorted matrix are like
     {1,2,3,4,5},
