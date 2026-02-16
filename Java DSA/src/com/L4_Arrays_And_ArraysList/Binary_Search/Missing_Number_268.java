@@ -1,5 +1,6 @@
 package com.L4_Arrays_And_ArraysList.Binary_Search;
 
+// https://leetcode.com/problems/missing-number/description/?envType=problem-list-v2&envId=binary-search
 /*
 first result = length of array
 then from 0 -> n-1(8)
