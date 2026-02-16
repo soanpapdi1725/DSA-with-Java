@@ -1,4 +1,4 @@
-package com.L4_Arrays_And_ArraysList.Binary_Search;
+package com.L4_Arrays_And_ArraysList.Binary_Search.Questions;
 
 // https://leetcode.com/problems/missing-number/description/?envType=problem-list-v2&envId=binary-search
 /*
