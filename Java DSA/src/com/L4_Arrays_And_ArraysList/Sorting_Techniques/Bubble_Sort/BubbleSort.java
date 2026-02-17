@@ -2,6 +2,12 @@ package com.L4_Arrays_And_ArraysList.Sorting_Techniques.Bubble_Sort;
 
 import java.util.Arrays;
 
+/*
+In this sorting algorithm it runs and swaps if conditions is true
+
+for example:-
+arr = [5, 4, 3, 2, 1];
+ */
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {5, 4, 3, 2, 1};
