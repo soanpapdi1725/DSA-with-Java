@@ -9,10 +9,18 @@ Best Case Scenario -> O(N²)
 
 Worst Case Scenario -> O(N²) if it is in opposite order
 
+Stability:-
 It is Unstable Sorting algorithm
 
 If unstable sorting array Algorithm -> [2🟡, 3🟣, 3🔵, 5🟢, 5🔴]
 means the order of colours can not be maintained as it was in given Array
+
+Number of Comparisons per Iteration => N-1-i
+
+N = length of array
+i = iteration
+N-1 = last element 
+N-1-i = iterate from last to first which depends on value of i in array
 
 Two ways
 1. Put Greatest element at it's correct position
