@@ -9,7 +9,10 @@ Best Case Scenario -> O(N²)
 
 Worst Case Scenario -> O(N²) if it is in opposite order
 
-It is Unstable Sorting algorithm means 
+It is Unstable Sorting algorithm
+
+If unstable sorting array Algorithm -> [2🟡, 3🟣, 3🔵, 5🟢, 5🔴]
+means the order of colours can not be maintained as it was in given Array
 
 Two ways
 1. Put Greatest element at it's correct position
