@@ -11,6 +11,15 @@ Worst Case -> O(N^2) -> when array is in opposite order
 
 Stability of an Algorithm->
 Arr given-> [ 5🔴 , 3🔵 , 5🟢 , 2🟡 , 3🟣 ]
+Sorted array without discussing balls -> [2, 3, 3, 5, 5]
+
+If Stable sorting array Algorithm -> [2🟡, 3🔵, 3🟣, 5🔴, 5🟢]
+means the order of colours should be maintained as it was in given Array
+Inme jese Given array me red and blue wale pehle aarahe hai wese hi unhe place kiya gya 3 and 5 me
+
+If unstable sorting array Algorithm -> [2🟡, 3🟣, 3🔵, 5🟢, 5🔴]
+means the order of colours can not be maintained as it was in given Array
+
 for example:-
 arr = [5, 4, 3, 2, 1];
  */
