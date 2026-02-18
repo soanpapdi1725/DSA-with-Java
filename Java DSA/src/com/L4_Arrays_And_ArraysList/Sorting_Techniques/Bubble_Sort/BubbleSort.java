@@ -9,6 +9,8 @@ Time Complexity->
 Best Case -> O(N) -> When Array is already sorted
 Worst Case -> O(N^2) -> when array is in opposite order
 
+Stability of an Algorithm->
+Arr given-> [ 5🔴 , 3🔵 , 5🟢 , 2🟡 , 3🟣 ]
 for example:-
 arr = [5, 4, 3, 2, 1];
  */
