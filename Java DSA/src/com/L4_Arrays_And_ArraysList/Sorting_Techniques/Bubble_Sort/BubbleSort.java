@@ -5,6 +5,10 @@ import java.util.Arrays;
 /*
 In this sorting algorithm it runs and swaps if conditions is true
 
+Time Complexity->
+Best Case -> O(N) -> When Array is already sorted
+Worst Case -> O(N^2) -> when array is in opposite order
+
 for example:-
 arr = [5, 4, 3, 2, 1];
  */

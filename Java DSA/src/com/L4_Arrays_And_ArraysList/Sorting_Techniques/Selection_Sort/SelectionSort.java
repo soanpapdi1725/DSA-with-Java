@@ -26,4 +26,7 @@ Arr = [1,2,3,4,5]
 and done
  */
 public class SelectionSort {
+    public static void main(String[] args) {
+
+    }
 }
