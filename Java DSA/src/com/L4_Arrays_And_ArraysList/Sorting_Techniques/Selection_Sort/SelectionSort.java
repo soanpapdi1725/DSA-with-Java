@@ -3,6 +3,14 @@ package com.L4_Arrays_And_ArraysList.Sorting_Techniques.Selection_Sort;
 /*
 Selection Sort-> It is an sorting algorithm, in this it selects the element and put it in it's correct position
 
+Time Complexity:-
+Best Case Scenario -> O(N²)
+   reason:- Because even in best case it will check the Max elements one by one that are they in their correct place or not
+
+Worst Case Scenario -> O(N²) if it is in opposite order
+
+It is Unstable Sorting algorithm means 
+
 Two ways
 1. Put Greatest element at it's correct position
 2. Put Smallest Element at it's correct position
