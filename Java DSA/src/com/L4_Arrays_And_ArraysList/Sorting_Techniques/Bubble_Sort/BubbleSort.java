@@ -9,6 +9,8 @@ Time Complexity->
 Best Case -> O(N) -> When Array is already sorted
 Worst Case -> O(N^2) -> when array is in opposite order
 
+Bubble sort is a stable algorithm means it will maintain the order
+
 Stability of an Algorithm->
 Arr given-> [ 5🔴 , 3🔵 , 5🟢 , 2🟡 , 3🟣 ]
 Sorted array without discussing balls -> [2, 3, 3, 5, 5]
