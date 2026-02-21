@@ -77,22 +77,27 @@ their original relative order.
 ## 💻 Java Implementation (Greatest to Last)
 
 ```java
-public class SelectionSort {
-    public static void sort(int[] arr) {
-        int n = arr.length;
+static void selectionSort(int[] arr) {
+    int n = arr.length;
+    for (int i = 0; i < n; i++) { // will run till (length - 1)
+            int last = n - 1 - i; // last index at every iteration so that we Can swap
+            int max = getMax(arr, 0, last); //will get the max element in the array one by one
+            swapNums(arr, max, last);
+   }
+}
 
-        for (int i = 0; i < n - 1; i++) {
-            // Find the maximum element in unsorted array [0...n-1-i]
-            int maxIdx = 0;
-            for (int j = 1; j < n - i; j++) {
-                if (arr[j] > arr[maxIdx]) {
-                    maxIdx = j;
-                }
-            }
-            // Swap the found maximum element with the last element
-            int temp = arr[maxIdx];
-            arr[maxIdx] = arr[n - 1 - i];
-            arr[n - 1 - i] = temp;
-        }
-    }
+static void swapNums(int[] arr, int maxIndex, int lastIndex) {
+    int temp = arr[maxIndex];
+    arr[maxIndex] = arr[lastIndex];
+    arr[lastIndex] = temp;
+}
+
+static int getMax(int[] arr, int start, int last) {
+   int max = 0;
+   for (int j = 0; j <= last; j++) {
+       if (arr[max] < arr[j]) {
+             max = j;
+       }
+   }
+   return max;
 }

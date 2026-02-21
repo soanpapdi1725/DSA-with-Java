@@ -111,28 +111,18 @@ In Big O, we focus on the highest power and ignore constants:
 ## 💻 Java Code (With Break Condition)
 
 ```java
-static void selectionSort(int[] arr) {
-        int n = arr.length;
-        for (int i = 0; i < n; i++) { // will run till (length - 1)
-            int last = n - 1 - i; // last index at every iteration so that we Can swap
-            int max = getMax(arr, 0, last); //will get the max element in the array one by one
-            swapNums(arr, max, last);
-        }
-    }
-
-    static void swapNums(int[] arr, int maxIndex, int lastIndex) {
-        int temp = arr[maxIndex];
-        arr[maxIndex] = arr[lastIndex];
-        arr[lastIndex] = temp;
-    }
-
-    static int getMax(int[] arr, int start, int last) {
-        int max = 0;
-        for (int j = 0; j <= last; j++) {
-            if (arr[max] < arr[j]) {
-                max = j;
+static void insertionSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) { // for (int i = 1; i < arr.length; i++)
+            for (int j = i + 1; j > 0; j--) { // for (int j = i; j > 0; j--)
+                if (arr[j] < arr[j - 1]) {
+                    int temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                } else { //if you found that [3,5,4,2,1] and j is at 5 and j-1 is at 3 
+                    // if array[j] > array[j-1] means already sorted
+                    break;
+                }
             }
         }
-        return max;
     }
 ---

@@ -2,7 +2,6 @@ package com.L4_Arrays_And_ArraysList.Sorting_Techniques.Selection_Sort;
 
 import java.util.Arrays;
 
-
 public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {-1, -5, -15, -25, 25, 15, 10, 18, 20, 30};
