@@ -18,6 +18,9 @@ public class InsertionSort {
                            You just place the new card in the correct spot.
 
 
+          For example:->
+          Array => [3,5,4,2,1]
+
      */
     public static void main(String[] args) {
 
