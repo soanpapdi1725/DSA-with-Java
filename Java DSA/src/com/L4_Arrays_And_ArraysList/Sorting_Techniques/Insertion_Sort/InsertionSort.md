@@ -100,7 +100,8 @@ In Big O, we focus on the highest power and ignore constants:
 * **Hybrid Sorting:** Java and Python use it as a fallback (Timsort/Dual-Pivot Quicksort) when partitions become small.
 * **Nearly Sorted Data:** It achieves **O(n)** time when the list is almost sorted, outperforming most advanced
   algorithms.
-* **example of nearly sorted:** [2,1,4,3,6,5] in this array array is sorted but in pairs of two it is unsorted here we
+* **example of nearly sorted:** [2,1,4,3,6,5] in this array, **array is sorted** but **in pairs of two it is unsorted**
+  here we
   can use the insertion sort for best results.
 * **Memory Efficiency:** It is an "In-Place" algorithm requiring **O(1)** extra space, ideal for memory-constrained IoT
   devices.
