@@ -111,18 +111,18 @@ In Big O, we focus on the highest power and ignore constants:
 ## 💻 Java Code (With Break Condition)
 
 ```java
-static void insertionSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) { // for (int i = 1; i < arr.length; i++)
-            for (int j = i + 1; j > 0; j--) { // for (int j = i; j > 0; j--)
-                if (arr[j] < arr[j - 1]) {
-                    int temp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = temp;
-                } else { //if you found that [3,5,4,2,1] and j is at 5 and j-1 is at 3 
-                    // if array[j] > array[j-1] means already sorted
-                    break;
-                }
-            }
+public void insertionSort(int[] arr) {
+    for (int i = 1; i < arr.length; i++) {
+        int key = arr[i];
+        int j = i - 1;
+
+        // The condition "arr[j] > key" acts as our break.
+        // If arr[j] is NOT bigger than key, the loop stops.
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j]; // Shift
+            j--;
         }
+        arr[j + 1] = key; // Insert card in the correct spot
     }
+}
 ---
