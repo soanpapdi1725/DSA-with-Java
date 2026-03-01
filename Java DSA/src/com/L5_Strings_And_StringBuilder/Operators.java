@@ -20,7 +20,15 @@ public class Operators {
         In java + operator will be used
         1. with primitives for example 5 + 6 or 'a' + 4
         2. with objects too but with one condition that one of them
-        should be String itself such as "Sonu" + new Integer(56)
+        should be String itself
+        for example
+        "Sonu" + new Integer(56)
+         new Integer(56) + "" + new ArrayList<>() -> work
          */
+
+        System.out.println(new Integer(56) + "" + new ArrayList<>());
+        // now work because string is mandatory be there if used for objects
+        // in any order
+        System.out.println("" + new Integer(56) + new ArrayList<>());
     }
 }
