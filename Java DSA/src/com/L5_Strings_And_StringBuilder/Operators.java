@@ -30,5 +30,6 @@ public class Operators {
         // now work because string is mandatory be there if used for objects
         // in any order
         System.out.println("" + new Integer(56) + new ArrayList<>());
+        System.out.println("a" + 'b'); // output-> ab char converts into string
     }
 }
