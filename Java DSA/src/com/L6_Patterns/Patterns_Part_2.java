@@ -7,7 +7,9 @@ public class Patterns_Part_2 {
         System.out.println("\npattern 30");
         pattern30(5);
         System.out.println("\npattern 17");
-        pattern17(9);
+        pattern17(5);
+        System.out.println("\npattern 31");
+        pattern31(4);
     }
 
     /*
@@ -36,6 +38,14 @@ public class Patterns_Part_2 {
         }
     }
 
+    /*
+    Pattern 28
+                1
+              2 1 2
+            3 2 1 2 3
+          4 3 2 1 2 3 4
+        5 4 3 2 1 2 3 4 5
+     */
     static void pattern30(int n) {
         for (int rows = 1; rows <= n; rows++) {
             int whiteSpaces = (n - rows) * 2;
@@ -53,6 +63,18 @@ public class Patterns_Part_2 {
 
     }
 
+    /*
+    Pattern 17
+                1
+              2 1 2
+            3 2 1 2 3
+          4 3 2 1 2 3 4
+        5 4 3 2 1 2 3 4 5
+          4 3 2 1 2 3 4
+            3 2 1 2 3
+              2 1 2
+                1
+     */
     static void pattern17(int n) {
         for (int rows = 1; rows <= (n * 2) - 1; rows++) {
             int whiteSpaces = rows > n ? (rows - n) * 2 : (n - rows) * 2;
@@ -65,6 +87,28 @@ public class Patterns_Part_2 {
             }
             for (int cols = 2; cols <= belowMaxNumber; cols++) {
                 System.out.print(cols + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+    Pattern 31 n = 4 -> rows = 2n-1, cols = 2n-1
+
+    4 4 4 4 4 4 4
+    4 3 3 3 3 3 4
+    4 3 2 2 2 3 4
+    4 3 2 1 2 3 4
+    4 3 2 2 2 3 4
+    4 3 3 3 3 3 4
+    4 4 4 4 4 4 4
+     */
+    static void pattern31(int n) {
+        int maxRowAndCols = (n * 2);
+        for (int rows = 0; rows <= maxRowAndCols; rows++) {
+            for (int cols = 0; cols <= maxRowAndCols; cols++) {
+                int numAtEveryIndex = n + 1 - Math.min(Math.min(rows, cols), Math.min(maxRowAndCols - rows, maxRowAndCols - cols));
+                System.out.print(numAtEveryIndex + " ");
             }
             System.out.println();
         }
