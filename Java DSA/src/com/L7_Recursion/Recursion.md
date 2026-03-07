@@ -97,4 +97,29 @@ static int fibonacci(int n) {
 
 `BinarySearch(N) = O(1) + BinarySearch(N/2) <- Here O(1) means it compares with target and arr[mid] is it bigger smaller or equals to it`
 
-## How to Understand a
+## How to Understand and Approach a problem using Recursion
+
+1. Identify if you can breakdown problem into smaller problem or not
+2. Form Recurrence Relation *(if needed)*
+3. Draw the recursive tree.
+4. About the tree.
+
+### Points to remember
+
+#### (Aspect 1)
+
+1. ⭐ **See the flow of function, how they are getting in stack.**
+2. ⭐ **Identify the flow oof left tree and right tree calls.**
+3. ⭐ **Draw the tree and pointer again and again using pen & paper to understand it better.**
+4. ⭐ *Use Debugger to see the change and stack.**
+5. ⭐ **See how the values are returned at each step.**
+6. ⭐ **See where two function call coming out of, In the end you come out main function.**
+
+#### Aspect(2): (Golden Rule ⛳)
+
+If we Know What variables will be there
+
+1. **Arguments**: These will be passed to future function and future function will use them
+2. **return type**: What type which the problem is demanding is it integer, String or etc...
+3. **Body of function**: these are the ones which changes at each function call which does not even needs to be in
+   argument you can generate them using arguments at each function call
