@@ -117,9 +117,33 @@ static int fibonacci(int n) {
 
 #### Aspect(2): (Golden Rule ⛳)
 
-If we Know What variables will be there
+If we Know What **variables** will be there
 
 1. **Arguments**: These will be passed to future function and future function will use them
 2. **return type**: What type which the problem is demanding is it integer, String or etc...
 3. **Body of function**: these are the ones which changes at each function call which does not even needs to be in
    argument you can generate them using arguments at each function call
+
+### For Example (Binary Search Code)
+
+```java 
+static int binarySearchRecursion(int[] arr, int target, int start, int end) { // -> Int will be return type
+    /**
+     Start and end needs to be passed in future recursion call because that will determine which part have been search and which not
+     Mid is not in the arguments because at each function call we gonna calculate the mid and check is it bigger, smaller or equals to target element or not
+     */
+    if (start > end) { // if we didn't found the element and start pointer is bigger to end pointer
+        return -1;
+    }
+    int mid = start + (end - start) / 2;
+
+    if (arr[mid] == target) {
+        return mid;
+    }
+    if (arr[mid] < target) {
+        /// return is important if you have return type such as int, String or others except void
+        return binarySearchRecursion(arr, target, mid + 1, end);
+    }
+    return binarySearchRecursion(arr, target, start, mid - 1);
+}
+```
