@@ -7,7 +7,14 @@ public class BinarySearchRecursion {
     }
 
     static int recursionBinarySearch(int[] arr, int start, int end, int target) {
-        //In argument
+        /*In arguments always pass the first important things which require
+
+        and also pass those things which future function require
+        and write those things in the function which needs to be function specific not every recursive function call specific
+        for example start and end will decide kitna hamne search kar liya hai toh ye toh har function ko pta hona chahiye kitna search kr liya hamne, Isliye arguments me hai Start and end
+
+        and mid is in function body because each function have to check different mid and different function call will be done
+        */
         if (start > end) {
             return -1;
         }
